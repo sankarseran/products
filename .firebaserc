@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "sample-5389e"
+  },
+  "targets": {
+    "sample-5389e": {
+      "hosting": {
+        "buyProduct": [
+          "sample-5389e"
+        ]
+      }
+    }
   }
 }
