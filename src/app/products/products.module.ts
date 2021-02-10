@@ -7,6 +7,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 import { ProductComponent } from './product/product.component';
 import { LayoutComponent } from './layout/layout.component';
+import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
   {
@@ -17,7 +18,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ProductComponent, LayoutComponent],
+  declarations: [ProductComponent, LayoutComponent, SearchComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

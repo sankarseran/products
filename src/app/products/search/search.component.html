@@ -1,0 +1,18 @@
+<div class="search-box-container">
+    <div class="left-container">
+        <mat-form-field appearance="legacy" class="first-mff">
+            <mat-label>Product Name</mat-label>
+            <input matInput maxlength="30" keyPrevent [(ngModel)]="productName">
+        </mat-form-field>
+        <mat-form-field appearance="legacy">
+            <mat-label>Product Type</mat-label>
+            <mat-select [(ngModel)]="productType">
+                <mat-option value="all">All</mat-option>
+                <mat-option value="book">Book</mat-option>
+                <mat-option value="music">Music</mat-option>
+                <mat-option value="games">Games</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <button (click)="searchProduct()" mat-raised-button color="primary">Search</button>
+</div>

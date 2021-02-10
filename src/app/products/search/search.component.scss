@@ -1,0 +1,16 @@
+.search-box-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 32px;
+    background-color: #7586e275;
+    .left-container {
+        .first-mff {
+            width: 300px;
+            margin: 0px;
+        }
+        mat-form-field {
+            margin-left: 20px;
+        }
+    }
+}
