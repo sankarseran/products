@@ -1,0 +1,31 @@
+.docs-navbar-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 8px 16px;
+    background-color: #3f51b5;
+    color: #fff;
+    box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    .left-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        .name {
+            font-size: 19px;
+        }
+        .material-icons {
+            font-size: 34px;
+            margin-left: 5px;
+        }
+    }
+}
+.container {
+    padding-top: 50px;
+}
