@@ -7,7 +7,7 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 16px;
-        height: 140px;
+        height: 120px;
         img {
             width: 45px;
         }
@@ -19,10 +19,13 @@
         align-items: flex-start;
         flex-direction: row;
         flex-wrap: wrap;
+        color: #002a6b;
     }
     .des-content {
-        max-height: 90px;
+        height: 60px;
         overflow: auto;
+        color: #a0a0a0;
+        text-transform: capitalize;
     }
     .footer-form{
         width: 50px;
@@ -31,5 +34,15 @@
         font-size: 17px;
         text-align: center;
         margin-right: 7px;
+    }
+    .name {
+        font-size: 15px;
+        font-weight: 500;
+        overflow-wrap: break-word;
+        height: 45px;
+        overflow: auto;
+        text-overflow: ellipsis;
+        color: #0018a0;
+        text-transform: capitalize;
     }
 }
