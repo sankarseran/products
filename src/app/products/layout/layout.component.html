@@ -3,7 +3,7 @@
         <!-- <button (click)="addProduct()" mat-raised-button color="secondary">Add Product</button> -->
         <div class="cart-icon-container">
             <span (click)="cartNavigation()" class="material-icons">
-                shopping_cart
+                {{isCart ? 'home' : 'shopping_cart'}}
             </span>
         </div>
     </div>
@@ -21,6 +21,6 @@
         </mat-menu>
     </div>
 </nav>
-<div class="container">
+<div class="container" [ngClass]="{'padding-50': isCart}">
     <router-outlet></router-outlet>
 </div>

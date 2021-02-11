@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { ActivatedRoute, NavigationEnd, Router, RouterEvent } from '@angular/router';
+import { filter } from 'rxjs/operators';
+import { MatDialog } from '@angular/material/dialog';
 import { AddProductModalComponent } from '../add-product-modal/add-product-modal.component';
 
 @Component({
@@ -10,9 +11,21 @@ import { AddProductModalComponent } from '../add-product-modal/add-product-modal
 })
 export class LayoutComponent implements OnInit {
   name: string | null | undefined;
+  isCart: boolean | undefined;
 
-  constructor(private router: Router,
-    public dialog: MatDialog) {}
+  constructor(private router: Router, public dialog: MatDialog,
+    private activatedRoute: ActivatedRoute) {
+      this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe((event: any) => {
+        console.log();
+        if (event?.url.split('/')[1] === 'cart') {
+          this.isCart = true;
+        } else {
+          this.isCart = false;
+        }
+      });
+    }
 
   ngOnInit(): void {
     this.name = localStorage.getItem('user');
@@ -24,13 +37,13 @@ export class LayoutComponent implements OnInit {
   }
 
   cartNavigation(): void {
-    this.router.navigate(['/cart']);
+    this.router.navigate([this.isCart ? '' : '/cart']);
   }
 
   addProduct() {
     console.log('products::');
     this.dialog.open(AddProductModalComponent, {
-      data: {}
+      data: {},
     });
   }
 }

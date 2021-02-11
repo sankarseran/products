@@ -11,17 +11,25 @@ import { LayoutComponent } from './layout/layout.component';
 import { SearchComponent } from './search/search.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { AddProductModalComponent } from './add-product-modal/add-product-modal.component';
+import { CartItemsComponent } from './cart-items/cart-items.component';
 
 const routes: Routes = [
   {
-    path: '', component: LayoutComponent, children: [
-      {path: '', component: ProductComponent}
-    ]
-  }
+    path: '',
+    component: LayoutComponent,
+    children: [{ path: '', component: ProductComponent }, { path: 'cart', component: CartItemsComponent }],
+  },
 ];
 
 @NgModule({
-  declarations: [ProductComponent, LayoutComponent, SearchComponent, ProductItemComponent, AddProductModalComponent],
+  declarations: [
+    ProductComponent,
+    LayoutComponent,
+    SearchComponent,
+    ProductItemComponent,
+    AddProductModalComponent,
+    CartItemsComponent,
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
@@ -29,7 +37,7 @@ const routes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     AngularFirestoreModule,
-    FlexLayoutModule
-  ]
+    FlexLayoutModule,
+  ],
 })
-export class ProductsModule { }
+export class ProductsModule {}
