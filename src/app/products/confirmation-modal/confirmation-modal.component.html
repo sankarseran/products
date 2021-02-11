@@ -1,0 +1,6 @@
+<div class="success-msg" [ngClass]="{'red': !product}">
+    <span class="material-icons">
+        {{product ? 'check_circle_outline' : 'report_gmailerrorred'}}
+    </span>
+    {{product ? 'Product added in cart!' : 'The product already bought! Go to cart, to check the history.'}}
+</div>

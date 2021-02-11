@@ -1,0 +1,16 @@
+.success-msg {
+    margin: 10px 40px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #37a745;
+    span {
+        font-size: 50px;
+    }
+}
+
+.red {
+    color: #a73737;
+}

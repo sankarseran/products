@@ -12,6 +12,7 @@ import { SearchComponent } from './search/search.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { AddProductModalComponent } from './add-product-modal/add-product-modal.component';
 import { CartItemsComponent } from './cart-items/cart-items.component';
+import { ConfirmationModalComponent } from './confirmation-modal/confirmation-modal.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,7 @@ const routes: Routes = [
     ProductItemComponent,
     AddProductModalComponent,
     CartItemsComponent,
+    ConfirmationModalComponent,
   ],
   imports: [
     CommonModule,

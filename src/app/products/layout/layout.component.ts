@@ -13,7 +13,8 @@ export class LayoutComponent implements OnInit {
   name: string | null | undefined;
   isCart: boolean | undefined;
 
-  constructor(private router: Router, public dialog: MatDialog,
+  constructor(private router: Router,
+    public dialog: MatDialog,
     private activatedRoute: ActivatedRoute) {
       this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))

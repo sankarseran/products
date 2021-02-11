@@ -1,8 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  AngularFirestore,
-  AngularFirestoreCollection,
-} from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root',
@@ -22,17 +19,22 @@ export class ProductService {
       contains = [productType];
     }
     console.log('productName', productName, 'productType', contains);
-    
-    return productRef.where('type', 'in', contains).get().then((res) => {
-      // console.log('userRes:', res);
-      if (res.empty) {
-        return [];
-      } else {
-        const values = res.docs.map((doc) => {
-          return doc.data();
-        });
-        return productName?.trim() ? values.filter((val: any) => val.name.includes(productName)) : values;
-      }
-    });
+
+    return productRef
+      .where('type', 'in', contains)
+      .get()
+      .then((res) => {
+        // console.log('userRes:', res);
+        if (res.empty) {
+          return [];
+        } else {
+          const values = res.docs.map((doc) => {
+            return doc.data();
+          });
+          return productName?.trim()
+            ? values.filter((val: any) => val.name.includes(productName))
+            : values;
+        }
+      });
   }
 }
