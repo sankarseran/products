@@ -1,3 +1,26 @@
 <div class="card-list-container">
-
+    <div class="cart-list" *ngFor="let item of cartList">
+        <mat-card>
+            <div class="left-container">
+                <div class="image-container">
+                    <img src="{{'../../../assets/img/' + item?.product?.type +'.png'}}" alt="product image">
+                </div>
+                <div class="text-contents">
+                    <span class="name">
+                        {{item?.product?.name}}
+                    </span>
+                    <span class="price">
+                        Price: {{item?.product?.price | currency}}
+                    </span>
+                </div>
+            </div>
+            <div class="right-container">
+                <mat-form-field class="footer-form">
+                    <mat-label>Qty</mat-label>
+                    <input matInput type="number" readonly [(ngModel)]="item.qty">
+                </mat-form-field>
+                <button (click)="deleteItem(item)" mat-raised-button color="primary">Delete</button>
+            </div>
+        </mat-card>
+    </div>
 </div>

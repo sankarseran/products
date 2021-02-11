@@ -18,8 +18,7 @@ export class ProductService {
     } else {
       contains = [productType];
     }
-    console.log('productName', productName, 'productType', contains);
-
+    
     return productRef
       .where('type', 'in', contains)
       .get()

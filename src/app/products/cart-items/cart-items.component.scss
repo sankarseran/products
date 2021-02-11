@@ -1,3 +1,54 @@
 .card-list-container {
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .cart-list {
+        margin-bottom: 10px;
+        mat-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: "Taviraj", serif !important;
+            width: 60%;
+            margin: auto;
+            .left-container {
+                display: flex;
+                .image-container {
+                    img {
+                        width: 55px;
+                    }
+                    margin-right: 10px;
+                }
+                .text-contents {
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    .name {
+                        font-size: 15px;
+                        font-weight: 500;
+                        overflow-wrap: break-word;
+                        color: #0018a0;
+                        text-transform: capitalize;
+                    }
+                    .price {
+                        font-weight: 500;
+                        color: #0018a06e;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+            .right-container {
+                .footer-form{
+                    width: 50px;
+                    font-family: 'Taviraj';
+                    font-weight: 500;
+                    font-size: 17px;
+                    text-align: center;
+                    margin-right: 7px;
+                }
+            }
+        }
+    }
 }
