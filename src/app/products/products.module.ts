@@ -10,6 +10,7 @@ import { ProductComponent } from './product/product.component';
 import { LayoutComponent } from './layout/layout.component';
 import { SearchComponent } from './search/search.component';
 import { ProductItemComponent } from './product-item/product-item.component';
+import { AddProductModalComponent } from './add-product-modal/add-product-modal.component';
 
 const routes: Routes = [
   {
@@ -20,7 +21,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ProductComponent, LayoutComponent, SearchComponent, ProductItemComponent],
+  declarations: [ProductComponent, LayoutComponent, SearchComponent, ProductItemComponent, AddProductModalComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

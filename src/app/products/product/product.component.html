@@ -3,7 +3,10 @@
 <div class="product-list-container">
     <div class="item-container" *ngFor="let product of products">
         <app-product-item [product]="product"></app-product-item>
-    </div>    
+    </div>
+    <div class="no-product-found" *ngIf="!loading && !products?.length">
+        No products Found.!
+    </div>
 </div>
 
 <!-- sm = screen and (min-width: 600px) and (max-width: 959.99px)

@@ -1,15 +1,25 @@
 <nav class="docs-navbar-header">
-    <span class="left-container" [matMenuTriggerFor]="menu">
-        <span class="name">
-            {{name}}
-        </span>
-        <span class="material-icons">
-            account_circle
-        </span>
-    </span>
-    <mat-menu #menu="matMenu">
-        <button (click)="logout()" mat-menu-item>Logout</button>
-    </mat-menu>
+    <div>
+        <!-- <button (click)="addProduct()" mat-raised-button color="secondary">Add Product</button> -->
+        <div class="cart-icon-container">
+            <span (click)="cartNavigation()" class="material-icons">
+                shopping_cart
+            </span>
+        </div>
+    </div>
+    <div>
+        <div class="left-container" [matMenuTriggerFor]="menu">
+            <span class="name">
+                {{name}}
+            </span>
+            <span class="material-icons">
+                account_circle
+            </span>
+        </div>
+        <mat-menu #menu="matMenu">
+            <button (click)="logout()" mat-menu-item>Logout</button>
+        </mat-menu>
+    </div>
 </nav>
 <div class="container">
     <router-outlet></router-outlet>

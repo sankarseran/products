@@ -28,10 +28,10 @@ export class ProductService {
       if (res.empty) {
         return [];
       } else {
-        return res.docs.map((doc) => {
-          // console.log(doc.id, '=>', doc.data());
+        const values = res.docs.map((doc) => {
           return doc.data();
         });
+        return productName?.trim() ? values.filter((val: any) => val.name.includes(productName)) : values;
       }
     });
   }

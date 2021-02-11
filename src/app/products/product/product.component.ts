@@ -11,6 +11,7 @@ import { ProductService } from '../services/product.service';
 })
 export class ProductComponent implements OnInit {
   products: Product[] | undefined;
+  loading: boolean | undefined;
 
   constructor(private productService: ProductService,
     private loader: LoaderService,
@@ -21,14 +22,17 @@ export class ProductComponent implements OnInit {
   }
 
   searchProduct(searchKey: {productName: string, productType: string}) {
-    console.log(searchKey);
+    // console.log(searchKey);
     this.loader.show();
+    this.loading = true;
     this.productService.searchProducts(searchKey.productName, searchKey.productType).then((res: Product[] | any) => {
       this.loader.hide();
       this.products = res;
+      this.loading = false;
       console.log('res: products', res);
     }).catch((err) => {
       this.loader.hide();
+      this.loading = false;
       this.toast.open('Something Went Wrong! Please try again later.', 'E');
     })
   }
