@@ -29,12 +29,12 @@ export class LoginComponent implements OnInit {
   }
 
   submit(): void {
-    console.log('submitting');
+    // console.log('submitting');
     const formVal = this.loginForm.value;
     if (formVal?.userName?.trim()?.length && formVal?.password?.trim()?.length) {
       this.loader.show();
       this.loginService.login(formVal?.userName, formVal?.password).then((res: any) => {
-        console.log('res', res);
+        // console.log('res', res);
         this.loader.hide();
         if(res?.length) {
           localStorage.setItem('user', res[0].userName);

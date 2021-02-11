@@ -35,7 +35,7 @@ export class ProductItemComponent implements OnInit {
       .addInCart(product, product.id, user, this.productQty)
       .then((res: any) => {
         this.loader.hide();
-        console.log(res);
+        // console.log(res);
         this.productQty = 1;
         this.dialog.open(ConfirmationModalComponent, {
           data: res.success,

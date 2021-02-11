@@ -11,7 +11,7 @@ export class ConfirmationModalComponent implements OnInit {
   constructor(@Inject(MAT_DIALOG_DATA) public product: any) { }
 
   ngOnInit(): void {
-    console.log('product', this.product);
+    // console.log('product', this.product);
   }
 
 }

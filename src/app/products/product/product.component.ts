@@ -29,7 +29,7 @@ export class ProductComponent implements OnInit {
       this.loader.hide();
       this.products = res;
       this.loading = false;
-      console.log('res: products', res);
+      // console.log('res: products', res);
     }).catch((err) => {
       this.loader.hide();
       this.loading = false;

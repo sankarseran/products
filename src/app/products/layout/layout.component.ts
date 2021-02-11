@@ -19,7 +19,7 @@ export class LayoutComponent implements OnInit {
       this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: any) => {
-        console.log();
+        // console.log();
         if (event?.url.split('/')[1] === 'cart') {
           this.isCart = true;
         } else {
@@ -42,7 +42,7 @@ export class LayoutComponent implements OnInit {
   }
 
   addProduct() {
-    console.log('products::');
+    // console.log('products::');
     this.dialog.open(AddProductModalComponent, {
       data: {},
     });
