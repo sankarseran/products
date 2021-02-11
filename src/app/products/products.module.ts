@@ -4,10 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { MaterialModule } from 'src/shared/materail.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { ProductComponent } from './product/product.component';
 import { LayoutComponent } from './layout/layout.component';
 import { SearchComponent } from './search/search.component';
+import { ProductItemComponent } from './product-item/product-item.component';
 
 const routes: Routes = [
   {
@@ -18,14 +20,15 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ProductComponent, LayoutComponent, SearchComponent],
+  declarations: [ProductComponent, LayoutComponent, SearchComponent, ProductItemComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FlexLayoutModule
   ]
 })
 export class ProductsModule { }

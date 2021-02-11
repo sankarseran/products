@@ -1,0 +1,17 @@
+.product-list-container {
+    padding: 20px;
+    height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    width: 100%;
+    flex-flow: row wrap;
+    box-sizing: border-box;
+    display: flex;
+    margin: 0px -25px -25px 0px;
+    .item-container {
+        padding: 0px 25px 25px 0px;
+        flex: 1 1 25%;
+        box-sizing: border-box;
+        max-width: 25%;
+    }
+}

@@ -1,2 +1,13 @@
-<app-search></app-search>
-<p>product works!</p>
+<app-search (search)="searchProduct($event)"></app-search>
+
+<div class="product-list-container">
+    <div class="item-container" *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9]">
+        <app-product-item></app-product-item>
+    </div>    
+</div>
+
+<!-- sm = screen and (min-width: 600px) and (max-width: 959.99px)
+lt-md = screen and (max-width: 959.99px)
+lt-lg = screen and (max-width: 1279.99px)
+lt-xl = screen and (max-width: 1919.99px)
+gt-xs = screen and (min-width: 600px) -->

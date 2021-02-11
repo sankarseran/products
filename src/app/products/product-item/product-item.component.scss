@@ -1,0 +1,35 @@
+.product-card {
+    // max-width: 400px;
+    font-family: "Taviraj", serif !important;
+    .image-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 16px;
+        height: 140px;
+        img {
+            width: 45px;
+        }
+    }
+    .price {
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .des-content {
+        max-height: 90px;
+        overflow: auto;
+    }
+    .footer-form{
+        width: 50px;
+        font-family: 'Taviraj';
+        font-weight: 500;
+        font-size: 17px;
+        text-align: center;
+        margin-right: 7px;
+    }
+}

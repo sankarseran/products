@@ -1,5 +1,5 @@
 <div class="search-box-container">
-    <div class="left-container">
+    <!-- <div class="left-container"> -->
         <mat-form-field appearance="legacy" class="first-mff">
             <mat-label>Product Name</mat-label>
             <input matInput maxlength="30" keyPrevent [(ngModel)]="productName">
@@ -13,6 +13,6 @@
                 <mat-option value="games">Games</mat-option>
             </mat-select>
         </mat-form-field>
-    </div>
+    <!-- </div> -->
     <button (click)="searchProduct()" mat-raised-button color="primary">Search</button>
 </div>

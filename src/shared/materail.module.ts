@@ -43,7 +43,6 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
 import { KeyPreventDirective } from './directive/key-board-prevent.directive';
-
 @NgModule({
   declarations: [KeyPreventDirective],
   exports: [

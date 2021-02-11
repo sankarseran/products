@@ -12,4 +12,8 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  searchProduct(searchKey: any) {
+    console.log(searchKey);
+  }
+
 }
