@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoaderService } from 'src/shared/services/loader.service';
-import { SnackBarService } from 'src/shared/services/snack-bar.service';
+import { LoaderService } from '../../shared/services/loader.service';
+import { SnackBarService } from '../../shared/services/snack-bar.service';
 import { LoginService } from '../services/login.service';
 
 @Component({

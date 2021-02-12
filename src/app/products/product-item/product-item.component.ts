@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { LoaderService } from 'src/shared/services/loader.service';
-import { SnackBarService } from 'src/shared/services/snack-bar.service';
+import { LoaderService } from '../../shared/services/loader.service';
+import { SnackBarService } from '../../shared/services/snack-bar.service';
 import { ConfirmationModalComponent } from '../confirmation-modal/confirmation-modal.component';
 import { CartService } from '../services/cart.service';
 import { Product } from '../services/product.model';
