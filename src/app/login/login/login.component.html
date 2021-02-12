@@ -1,6 +1,6 @@
 <div class="login-form-container">
     <mat-card>
-        <mat-card-title>LOGIN / SIGN IN </mat-card-title>
+        <mat-card-title>{{isSignUp ? 'SIGN UP' : 'LOGIN'}}</mat-card-title>
         <mat-card-content>
             <form [formGroup]="loginForm">
                 <mat-form-field appearance="outline">
@@ -14,8 +14,8 @@
                 </mat-form-field>
 
                 <div class="button">
-                    <button (click)="submit()" type="submit" color="primary" mat-button>LOGIN</button>
-                    <button (click)="register()" type="reset" color="primary" mat-button>SIGN IN </button>
+                    <button (click)="isSignUp ? register() : submit()" type="submit" color="primary" mat-button>{{isSignUp ? 'SIGN UP' : 'LOGIN'}}</button>
+                    <a (click)="isSignUp = !isSignUp">{{isSignUp ? 'Click here for login' : 'Click here for sign up'}}</a>
                 </div>
             </form>
         </mat-card-content>

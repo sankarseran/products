@@ -19,5 +19,13 @@
     .button {
         display: flex;
         justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        a {
+            margin-top: 10px;
+            cursor: pointer;
+            color: #6d7ac6;
+            text-decoration: underline;
+        }
     }
 }
