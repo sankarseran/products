@@ -23,4 +23,10 @@
             </div>
         </mat-card>
     </div>
+    <div class="no-product-found" *ngIf="!loading && !cartList?.length">
+        <span class="material-icons">
+            report_gmailerrorred
+        </span>
+        Cart is empty!
+    </div>
 </div>

@@ -87,7 +87,9 @@ export class CartService {
           res.forEach((doc) => {
             doc.ref.delete();
           });
-          return {success: true};
+          return setTimeout(() => {
+            return {success: true};
+          }, 1000)
         }
       });
   }
