@@ -30,8 +30,8 @@ export class ProductService {
           const values = res.docs.map((doc) => {
             return doc.data();
           });
-          return productName?.trim()
-            ? values.filter((val: any) => val.name.includes(productName))
+          return productName?.trim()?.length
+            ? values.filter((val: any) => val.name.includes(productName.toLowerCase()))
             : values;
         }
       });

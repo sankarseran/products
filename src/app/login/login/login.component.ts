@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
     ) {
       this.loader.show();
       this.loginService
-        .login(formVal?.userName, formVal?.password)
+        .login(formVal?.userName.toLowerCase(), formVal?.password)
         .then((res: any) => {
           // console.log('res', res);
           this.loader.hide();
@@ -65,14 +65,15 @@ export class LoginComponent implements OnInit {
       formVal?.userName?.trim()?.length &&
       formVal?.password?.trim()?.length
     ) {
+      const user = formVal?.userName.toLowerCase();
       this.loader.show();
       this.loginService
-        .register(formVal?.userName, formVal?.password)
+        .register(user, formVal?.password)
         .then((res: any) => {
           // console.log('res', res);
           this.loader.hide();
           if (res?.success) {
-            localStorage.setItem('user', formVal?.userName);
+            localStorage.setItem('user', user);
             this.router.navigate(['']);
           } else {
             this.snack.open('User Name Already Exist!', 'E');
