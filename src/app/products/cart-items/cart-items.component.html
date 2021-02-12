@@ -3,7 +3,7 @@
         <mat-card>
             <div class="left-container">
                 <div class="image-container">
-                    <img src="{{'../../../assets/img/' + item?.product?.type +'.png'}}" alt="product image">
+                    <img src="{{'../../../assets/img/' + item?.product?.type +'.jpg'}}" alt="product image">
                 </div>
                 <div class="text-contents">
                     <span class="name">
@@ -19,7 +19,7 @@
                     <mat-label>Qty</mat-label>
                     <input matInput type="number" readonly [(ngModel)]="item.qty">
                 </mat-form-field>
-                <button (click)="deleteItem(item)" mat-raised-button color="primary">Delete</button>
+                <!-- <button (click)="deleteItem(item)" mat-raised-button color="primary">Delete</button> -->
             </div>
         </mat-card>
     </div>
